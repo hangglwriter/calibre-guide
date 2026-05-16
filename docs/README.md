@@ -404,6 +404,9 @@ EPUB에서 빈 줄이 대량으로 생깁니다.<br>
 
 캘리버가 변환할 때 자동으로 넣는 코드인데, 서점에서 "부적합한 EPUB"으로 판단합니다.
 
+![class="calibre" 위치](images/step4-class-calibre.png)
+*책 편집기 왼쪽 파일 목록의 페이지를 하나씩 열어보면, 맨 위쪽 `<html>` 태그에 위처럼 `class="calibre"`가 들어가 있어요. 이게 서점이 거부하는 부분입니다.*
+
 ![유페이퍼 오류](images/step4-upaper-error.png)
 *유페이퍼에 등록했을 때 나오는 오류 화면*
 
