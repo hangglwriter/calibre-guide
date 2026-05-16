@@ -462,12 +462,15 @@ EPUB에서 빈 줄이 대량으로 생깁니다.<br>
 
 <div class="warning-box">
 ⚠️ <b>한 번 더 확인해주세요!</b><br><br>
-캘리버는 책에 따라 <code>class="calibre1"</code>, <code>class="calibre2"</code>처럼 숫자가 붙은 클래스도 만듭니다.<br>
-위 작업을 끝낸 후, 같은 방법으로 아래도 한 번씩 검색해서 모두 교체해주세요.<br><br>
-<code> class="calibre1"</code><br>
-<code> class="calibre2"</code><br><br>
-검색 결과가 0개로 나오면 그 번호는 없는 거니까 다음 번호로 넘어가시면 됩니다. 보통 1~2번까지만 있습니다.<br><br>
-이게 번거로우시면 위쪽의 <b>"수정 방법 1 - 정규 표현식"</b>을 쓰시면 한 번에 끝납니다.
+캘리버는 <code>&lt;body&gt;</code>에 <code>class="calibre1"</code>을 넣는 경우도 있으니, 이것도 마찬가지로 확인해주세요.<br>
+위 작업을 끝낸 후, 같은 방법으로 <code> class="calibre1"</code>도 검색해서 모두 교체해주세요. (맨 앞에 공백 한 칸 포함)<br><br>
+검색 결과가 0개로 나오면 없는 거니까 넘어가시면 됩니다.
+</div>
+
+<div class="warning-box">
+⚠️ <b>calibre2, calibre3 같이 숫자가 2 이상인 건 빼지 마세요!</b><br><br>
+캘리버는 표·볼드·이미지 크기 같은 디자인 정보를 <code>calibre2</code>, <code>calibre3</code>, <code>calibre4</code>... 같은 클래스에 담아둡니다. 이걸 빼면 표가 깨지거나 볼드 글씨가 풀리는 등 책 디자인이 망가집니다.<br><br>
+서점 등록에서 문제 삼는 건 <code>&lt;html&gt;</code>의 <code>calibre</code>와 <code>&lt;body&gt;</code>의 <code>calibre1</code>뿐입니다. 이 두 가지만 빼면 됩니다.
 </div>
 
 ### 4-3. 최종 파일 저장
