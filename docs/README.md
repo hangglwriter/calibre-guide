@@ -419,7 +419,7 @@ EPUB에서 빈 줄이 대량으로 생깁니다.<br>
 3. 범위: <b>"모든 텍스트 파일"</b>로 변경
 4. 찾기에 입력:
 ```
-(<(?:html|body)[^>]*)\s+class="calibre"
+(<(?:html|body)[^>]*)\s+class="calibre\d*"
 ```
 5. 교체에 입력:
 ```
@@ -430,6 +430,12 @@ EPUB에서 빈 줄이 대량으로 생깁니다.<br>
 
 6. <b>"모두 교체"</b> 클릭
 7. <b>Ctrl+S</b>로 저장
+
+<div class="tip-box">
+💡 <b>왜 끝에 <code>\d*</code>가 붙었나요?</b><br><br>
+캘리버는 책마다 <code>class="calibre"</code>로 넣기도 하고, <code>class="calibre1"</code>, <code>class="calibre2"</code>처럼 숫자를 붙이기도 합니다.<br>
+<code>\d*</code>를 붙이면 숫자가 있든 없든 한 번에 다 잡힙니다.
+</div>
 
 ---
 
@@ -453,6 +459,16 @@ EPUB에서 빈 줄이 대량으로 생깁니다.<br>
 5. 교체: <b>비워두기</b> (아무것도 입력하지 않음)
 6. <b>"모두 교체"</b> 클릭
 7. <b>Ctrl+S</b>로 저장
+
+<div class="warning-box">
+⚠️ <b>한 번 더 확인해주세요!</b><br><br>
+캘리버는 책에 따라 <code>class="calibre1"</code>, <code>class="calibre2"</code>처럼 숫자가 붙은 클래스도 만듭니다.<br>
+위 작업을 끝낸 후, 같은 방법으로 아래도 한 번씩 검색해서 모두 교체해주세요.<br><br>
+<code> class="calibre1"</code><br>
+<code> class="calibre2"</code><br><br>
+검색 결과가 0개로 나오면 그 번호는 없는 거니까 다음 번호로 넘어가시면 됩니다. 보통 1~2번까지만 있습니다.<br><br>
+이게 번거로우시면 위쪽의 <b>"수정 방법 1 - 정규 표현식"</b>을 쓰시면 한 번에 끝납니다.
+</div>
 
 ### 4-3. 최종 파일 저장
 
