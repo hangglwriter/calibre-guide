@@ -467,12 +467,6 @@ EPUB에서 빈 줄이 대량으로 생깁니다.<br>
 검색 결과가 0개로 나오면 없는 거니까 넘어가시면 됩니다.
 </div>
 
-<div class="warning-box">
-⚠️ <b>calibre2, calibre3 같이 숫자가 2 이상인 건 빼지 마세요!</b><br><br>
-캘리버는 표·볼드·이미지 크기 같은 디자인 정보를 <code>calibre2</code>, <code>calibre3</code>, <code>calibre4</code>... 같은 클래스에 담아둡니다. 이걸 빼면 표가 깨지거나 볼드 글씨가 풀리는 등 책 디자인이 망가집니다.<br><br>
-서점 등록에서 문제 삼는 건 <code>&lt;html&gt;</code>의 <code>calibre</code>와 <code>&lt;body&gt;</code>의 <code>calibre1</code>뿐입니다. 이 두 가지만 빼면 됩니다.
-</div>
-
 ### 4-3. 최종 파일 저장
 
 오류 수정이 끝나면, EPUB 파일을 내 컴퓨터에 저장합니다.
