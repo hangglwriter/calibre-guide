@@ -64,6 +64,33 @@
     }
     /* 체크리스트 스타일 */
     .markdown-section ul li { list-style: none; margin-left: -1em; }
+    /* 접힘(details) 스타일 */
+    .markdown-section details {
+      border: 1px solid #E67E22;
+      border-radius: 8px;
+      margin: 1em 0;
+      overflow: hidden;
+    }
+    .markdown-section summary {
+      background: #FFF3E0;
+      padding: 12px 16px;
+      font-weight: bold;
+      color: #2C3E50;
+      cursor: pointer;
+      list-style: none;
+    }
+    .markdown-section summary::-webkit-details-marker { display: none; }
+    .markdown-section summary::before {
+      content: '▶';
+      color: #E67E22;
+      margin-right: 8px;
+      font-size: 0.8em;
+    }
+    .markdown-section details[open] summary::before { content: '▼'; }
+    .markdown-section details[open] summary { border-bottom: 1px solid #E67E22; }
+    .markdown-section details > *:not(summary) { padding: 0 16px; }
+    .markdown-section details > pre { margin: 1em 16px; padding: 0; }
+    .markdown-section details > div { margin: 1em 16px; }
   </style>
 </head>
 <body>
